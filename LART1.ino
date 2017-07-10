@@ -37,7 +37,7 @@
 #include "SD.h"
 #include "ClickButton.h"
 
-#define VERSION "1.001a"
+#define VERSION "2.000a"
 #define ADC_REFERENCE REF_5V
 // various debug flags
 // #define DEBUG_APRS_SETTINGS

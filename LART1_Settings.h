@@ -16,7 +16,7 @@
 // 
 
 // default message comment (max of 35 characters) 
-#define APRS_COMMENT "LART1 Tracker v1"
+#define APRS_COMMENT "LART1 Tracker v2"
 
 // DRA818 Transceiver 
 // APRS 2 meter tx and rx frequency for North America  (134-174MHz) 

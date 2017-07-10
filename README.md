@@ -6,10 +6,11 @@ Arduino Software for an APRS Tracker
 
 a.k.a Livermore Amateur Radio Club APRS Tracker (LART/1) 
 # Introduction
-This arduino software provides an aprs tracker, which can act as an APRS beacon transmiter or Receiver.  In beacon mode, it can send out APRS position reports (lat/lon and altitude). It also acts as an APRS receiver (KISS interface planned).  
-Unlike commerical units, this tracker was designed for low cost and easy of use. 
+This Arduino software provides an aprs tracker, which can act as an self-contained APRS beacon transmiter or Receiver.  In beacon mode, it can send out APRS position reports (lat/lon and altitude). It also acts as an APRS receiver.  
+Unlike commercial units, this tracker was designed for low cost and easy of use. 
 
 # Features
++ KISS Interface (arduino usb port) 
 + Reads configuration from SD card (and can writes log file)
 + Send APRS position reports (fields sent: lat/lon/altitude/comments)
 + Adaptive Interval Beacon Mode (NotSoSmart_Beacon mode) 
@@ -19,8 +20,6 @@ Unlike commerical units, this tracker was designed for low cost and easy of use.
     + path routing, dest, preamble, tail, symbol 
 + Adjustable Transceiver Settings 
     + Freq, CTCSS Tones, Squelch, Bandwidth, Filters,  and Volume
-+ Receives APRS message and print output
-    + KISS interface planned 
 + LCD Display with Status LEDs
     
 
@@ -61,6 +60,7 @@ These libraries have been modified to work with the LART tracker code (bug fixes
 
 # References
 + [MicroModem Circuit](https://github.com/markqvist/MicroModem). 
++ [MicroAPRS](https://github.com/markqvist/MicroAPRS). 
 + [LibAPRS](https://github.com/markqvist/LibAPRS)
 + [TinyGPSplus](https://github.com/mikalhart/TinyGPSPlus) 
 + [DRA818](https://github.com/darksidelemm/dra818) 
@@ -69,6 +69,7 @@ These libraries have been modified to work with the LART tracker code (bug fixes
 
 
 # Status
-+ Version 1.000a  - first major release
++ Version 2.000a  - KISS Interface
++ Version 1.000a  - first major release 
 
 
