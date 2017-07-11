@@ -44,4 +44,7 @@
     #define APRS_PTT_TX_LOW
 #endif
 
+// #define SERIAL_PROTO PROTO_KISS
+#define SERIAL_PROTO PROTO_DEBUG
+
 #endif

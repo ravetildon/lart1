@@ -153,6 +153,8 @@ char buf[120] ;
 
 boolean gotPacket = false ;
 int recv_count = 0 ;
+
+#if SERIAL_PROTO == PROTO_DEBUG
 AX25Msg incomingPacket;
 uint8_t *packetData;
 
@@ -170,6 +172,28 @@ void aprs_msg_callback(struct AX25Msg *msg)
       }
    }
 }
+
+#endif
+
+#if SERIAL_PROTO == PROTO_KISS
+extern AX25Ctx AX25 ;
+void aprs_callback(struct AX25Ctx *ctx) {
+   if(!gotPacket) {
+      gotPacket = true ;
+      memcpy(&incomingPacket, ctx, sizeof(AX25Ctx));
+      if (freeMemory() > ctx->len) {
+         packetData = (uint8_t*) malloc(ctx->len);
+         memcpy(packetData,msg->info,msg->len);
+         incomingPacket.info=packetData;
+      } else {
+         gotPacket = false ;
+      }
+   }
+
+}
+
+#endif
+
 
 
 void processPacket()
